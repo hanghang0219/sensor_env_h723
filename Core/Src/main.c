@@ -19,7 +19,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "crc.h"
 #include "i2c.h"
+#include "memorymap.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -96,9 +98,9 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   MX_USART1_UART_Init();
+  MX_I2C2_Init();
+  MX_CRC_Init();
   /* USER CODE BEGIN 2 */
-
-
 
   /* USER CODE END 2 */
 
@@ -244,8 +246,7 @@ void Error_Handler(void)
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
   __disable_irq();
-  while (1) {
-  }
+  while (1) {}
   /* USER CODE END Error_Handler_Debug */
 }
 
