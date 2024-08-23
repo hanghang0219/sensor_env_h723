@@ -98,7 +98,6 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   MX_USART1_UART_Init();
-  MX_I2C2_Init();
   MX_CRC_Init();
   /* USER CODE BEGIN 2 */
 
@@ -117,6 +116,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1) {
     /* USER CODE END WHILE */
 
